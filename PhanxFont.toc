@@ -1,0 +1,27 @@
+## Interface: 50400
+## Version: 5.4.8.wowi:revision
+
+## Title: PhanxFont
+## Notes: Simple font replacement.
+## Notes-deDE: Einfacher Erzatz der Schriften.
+## Notes-esES: Sustitución de fuentes simple.
+## Notes-esMX: Sustitución de fuentes simple.
+
+## Author: Phanx
+## X-Email: addons@phanx.net
+## X-Credits: Based on tekticles by Tekkub, which is based on ClearFont2 by Kirkburn.
+## X-Copyright: Copyright (c) 2012-2014 Phanx. All rights reserved.
+## X-License: See the accompanying LICENSE file for details.
+## X-CompatibleLocales: enUS, deDE, esES, esMX, frFR, itIT, koKR, ptBR, ruRU, zhCN, zhTW
+
+## OptionalDeps: LibSharedMedia-3.0, PhanxConfigWidgets
+## SavedVariables: PhanxFontDB
+
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+Libs\LibSharedMedia-3.0\LibSharedMedia-3.0.lua
+Libs\PhanxConfig-ScrollingDropdown\PhanxConfig-ScrollingDropdown.lua
+Libs\PhanxConfig-Slider\PhanxConfig-Slider.lua
+
+Addon.lua
+Options.lua
