@@ -1,9 +1,9 @@
-## Interface: 50400
-## Version: 5.4.8.wowi:revision
+## Interface: 60000
+## Version: 6.0.2.wowi:revision
 
 ## Title: PhanxFont
 ## Notes: Simple font replacement.
-## Notes-deDE: Einfacher Erzatz der Schriften.
+## Notes-deDE: Einfacher Schriftenersatz.
 ## Notes-esES: Sustitución de fuentes simple.
 ## Notes-esMX: Sustitución de fuentes simple.
 
