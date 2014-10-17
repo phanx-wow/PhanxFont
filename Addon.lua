@@ -175,6 +175,11 @@ f:SetScript("OnEvent", function(self, event, addon)
 		_G["HelpFrameButton"..i.."Text"]:SetFontObject(GameFontNormalMed3)
 	end
 
+	-- More random shit
+	WorldMapFrame:HookScript("OnShow", function()
+		WorldMapFrameNavBarHomeButtonText:SetFont(GameFontNormal:GetFont())
+	end)
+
 	BattlePetTooltip.Name:SetFontObject(GameTooltipHeaderText)
 	FloatingBattlePetTooltip.Name:SetFontObject(GameTooltipHeaderText)
 end)
