@@ -43,7 +43,7 @@ Options:SetScript("OnShow", function(self)
 
 	----------
 
-	local NormalFont = LibStub("PhanxConfig-ScrollingDropdown"):New(self, L["Normal Font"], nil, Media:List("font"))
+	local NormalFont = LibStub("PhanxConfig-Dropdown"):New(self, L["Normal Font"], nil, Media:List("font"))
 	NormalFont:SetPoint("TOPLEFT", Notes, "BOTTOMLEFT", 0, -8)
 	NormalFont:SetPoint("TOPRIGHT", Notes, "BOTTOM", -8, -8)
 
@@ -69,7 +69,7 @@ Options:SetScript("OnShow", function(self)
 
 	----------
 
-	local BoldFont = LibStub("PhanxConfig-ScrollingDropdown"):New(self, L["Bold Font"], nil, Media:List("font"))
+	local BoldFont = LibStub("PhanxConfig-Dropdown"):New(self, L["Bold Font"], nil, Media:List("font"))
 	BoldFont:SetPoint("TOPLEFT", NormalFont, "BOTTOMLEFT", 0, -16)
 	BoldFont:SetPoint("TOPRIGHT", NormalFont, "BOTTOMRIGHT", 0, -16)
 
