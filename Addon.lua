@@ -61,8 +61,10 @@ function Addon:SetFonts(event, addon)
 	SetFont(NumberFont_Outline_Med,             NUMBER, 15, "OUTLINE")
 	SetFont(NumberFont_Shadow_Med,              NORMAL, 14)
 	SetFont(NumberFont_Shadow_Small,            NORMAL, 12)
+	SetFont(NumberFont_GameNormal,              NORMAL, 13) -- orig 10
 	SetFont(QuestFont_Shadow_Small,             NORMAL, 16)
 	SetFont(QuestFont_Large,                    NORMAL, 16)
+	SetFont(QuestFont_Huge,                       BOLD, 19)
 	SetFont(QuestFont_Shadow_Huge,                BOLD, 19, nil, nil, nil, nil, 0.54, 0.4, 0.1)
 	SetFont(QuestFont_Super_Huge,                 BOLD, 24)
 	SetFont(ReputationDetailFont,                 BOLD, 12, nil, nil, nil, nil, 0, 0, 0, 1, -1)
@@ -175,13 +177,11 @@ f:SetScript("OnEvent", function(self, event, addon)
 		_G["HelpFrameButton"..i.."Text"]:SetFontObject(GameFontNormalMed3)
 	end
 
-	-- More random shit
-	WorldMapFrame:HookScript("OnShow", function()
-		WorldMapFrameNavBarHomeButtonText:SetFont(GameFontNormal:GetFont())
-	end)
-
 	BattlePetTooltip.Name:SetFontObject(GameTooltipHeaderText)
 	FloatingBattlePetTooltip.Name:SetFontObject(GameTooltipHeaderText)
+	
+	LFGListFrame.CategorySelection.CategoryButtons[1].Label:SetFontObject(GameFontNormal)
+	WorldMapFrameNavBarHomeButtonText:SetFontObject(GameFontNormal)
 end)
 
 hooksecurefunc("FCF_SetChatWindowFontSize", function(self, frame, size)
