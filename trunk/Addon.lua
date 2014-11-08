@@ -1,4 +1,18 @@
-﻿local ADDON, Addon = ...
+﻿--[[--------------------------------------------------------------------
+	PhanxFont
+	Simple font replacement.
+	Based on tekticles by Tekkub, which is based on ClearFont2 by Kirkburn.
+	Copyright (c) 2012-2014 Phanx <addons@phanx.net>. All rights reserved.
+
+	Please DO NOT upload this addon to other websites, or post modified
+	versions of it. However, you are welcome to use any/all of its code
+	in your own addon, as long as you do not use my name or the name of
+	this addon ANYWHERE in your addon, including in its name, outside of
+	an optional attribution. You are also welcome to include this addon
+	WITHOUT CHANGES in compilations posted on Curse and/or WoWInterface.
+----------------------------------------------------------------------]]
+
+local ADDON, Addon = ...
 
 PhanxFontDB = {
 	normal = "Asap",
@@ -179,7 +193,7 @@ f:SetScript("OnEvent", function(self, event, addon)
 
 	BattlePetTooltip.Name:SetFontObject(GameTooltipHeaderText)
 	FloatingBattlePetTooltip.Name:SetFontObject(GameTooltipHeaderText)
-	
+
 	LFGListFrame.CategorySelection.CategoryButtons[1].Label:SetFontObject(GameFontNormal)
 	WorldMapFrameNavBarHomeButtonText:SetFontObject(GameFontNormal)
 end)
