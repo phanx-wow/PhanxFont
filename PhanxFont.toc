@@ -10,8 +10,8 @@
 ## Author: Phanx
 ## X-Email: addons@phanx.net
 ## X-Credits: Based on tekticles by Tekkub, which is based on ClearFont2 by Kirkburn.
-## X-Copyright: Copyright (c) 2012-2014 Phanx. All rights reserved.
-## X-License: See the accompanying LICENSE file for details.
+## X-Copyright: Copyright (c) 2012-2014 Phanx.
+## X-License: All rights reserved.
 ## X-CompatibleLocales: enUS, deDE, esES, esMX, frFR, itIT, koKR, ptBR, ruRU, zhCN, zhTW
 
 ## OptionalDeps: LibSharedMedia-3.0, PhanxConfigWidgets
