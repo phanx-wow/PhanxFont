@@ -61,14 +61,14 @@ Options:SetScript("OnShow", function(self)
 	NormalFont:SetPoint("TOPLEFT", Notes, "BOTTOMLEFT", 0, -8)
 	NormalFont:SetPoint("TOPRIGHT", Notes, "BOTTOM", -8, -8)
 
-	function NormalFont:Callback(value)
+	function NormalFont:OnValueChanged(value)
 		local _, height, flags = self.valueText:GetFont()
 		self.valueText:SetFont(Media:Fetch("font", value), height, flags)
 		PhanxFontDB.normal = value
 		UpdatePreviews()
 	end
 
-	function NormalFont:ListButtonCallback(button, value, selected)
+	function NormalFont:OnListButtonChanged(button, value, selected)
 		if button:IsShown() then
 			button.label:SetFont(Media:Fetch("font", value), UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT)
 		end
@@ -87,14 +87,14 @@ Options:SetScript("OnShow", function(self)
 	BoldFont:SetPoint("TOPLEFT", NormalFont, "BOTTOMLEFT", 0, -16)
 	BoldFont:SetPoint("TOPRIGHT", NormalFont, "BOTTOMRIGHT", 0, -16)
 
-	function BoldFont:Callback(value)
+	function BoldFont:OnValueChanged(value)
 		local _, height, flags = self.valueText:GetFont()
 		self.valueText:SetFont(Media:Fetch("font", value), height, flags)
 		PhanxFontDB.bold = value
 		UpdatePreviews()
 	end
 
-	function BoldFont:ListButtonCallback(button, value, selected)
+	function BoldFont:OnListButtonChanged(button, value, selected)
 		if button:IsShown() then
 			button.label:SetFont(Media:Fetch("font", value), UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT)
 		end
@@ -113,7 +113,7 @@ Options:SetScript("OnShow", function(self)
 	Scale:SetPoint("TOPLEFT", BoldFont, "BOTTOMLEFT", 0, -16)
 	Scale:SetPoint("TOPRIGHT", BoldFont, "BOTTOMRIGHT", 0, -16)
 
-	function Scale:Callback(value)
+	function Scale:OnValueChanged(value)
 		PhanxFontDB.scale = value
 		UpdatePreviews()
 	end
