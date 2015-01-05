@@ -55,8 +55,9 @@ function Addon:SetFonts(event, addon)
 	DAMAGE_TEXT_FONT   = NUMBER
 	STANDARD_TEXT_FONT = NORMAL
 
-	-- Base fonts
+	-- Base fonts in Fonts.xml
 	SetFont(AchievementFont_Small,                BOLD, 12)
+	SetFont(ChatBubbleFont,                     NORMAL, 13)
 	SetFont(CoreAbilityFont,                      BOLD, 32)
 	SetFont(DestinyFontHuge,                      BOLD, 32)
 	SetFont(DestinyFontLarge,                     BOLD, 18)
@@ -64,54 +65,72 @@ function Addon:SetFonts(event, addon)
 	SetFont(FriendsFont_Normal,                 NORMAL, 13, nil, nil, nil, nil, 0, 0, 0, 1, -1)
 	SetFont(FriendsFont_Small,                  NORMAL, 11, nil, nil, nil, nil, 0, 0, 0, 1, -1)
 	SetFont(FriendsFont_UserText,               NUMBER, 12, nil, nil, nil, nil, 0, 0, 0, 1, -1)
-	SetFont(GameTooltipHeader,                    BOLD, 15, "OUTLINE")
+	SetFont(Game18Font,                         NORMAL, 18)
+	SetFont(Game24Font,                         NORMAL, 24) -- there are two of these, good job Blizzard
+	SetFont(Game27Font,                         NORMAL, 27)
+	SetFont(Game30Font,                         NORMAL, 30)
+	SetFont(Game32Font,                         NORMAL, 32)
 	SetFont(GameFont_Gigantic,                    BOLD, 32, nil, nil, nil, nil, 0, 0, 0, 1, -1)
+	SetFont(GameTooltipHeader,                    BOLD, 15, "OUTLINE") -- SharedFonts.xml
 	SetFont(InvoiceFont_Med,                    ITALIC, 13, nil, 0.15, 0.09, 0.04)
 	SetFont(InvoiceFont_Small,                  ITALIC, 11, nil, 0.15, 0.09, 0.04)
 	SetFont(MailFont_Large,                     ITALIC, 15, nil, 0.15, 0.09, 0.04, 0.54, 0.4, 0.1, 1, -1)
-	SetFont(NumberFont_OutlineThick_Mono_Small, NUMBER, 13, "OUTLINE")
+	SetFont(NumberFont_GameNormal,              NORMAL, 10)
+	SetFont(NumberFont_Normal_Med,              NUMBER, 14)
 	SetFont(NumberFont_Outline_Huge,            NUMBER, 30, "THICKOUTLINE", 30)
 	SetFont(NumberFont_Outline_Large,           NUMBER, 17, "OUTLINE")
 	SetFont(NumberFont_Outline_Med,             NUMBER, 15, "OUTLINE")
+	SetFont(NumberFont_OutlineThick_Mono_Small, NUMBER, 13, "OUTLINE")
 	SetFont(NumberFont_Shadow_Med,              NORMAL, 14)
 	SetFont(NumberFont_Shadow_Small,            NORMAL, 12)
-	SetFont(NumberFont_GameNormal,              NORMAL, 13) -- orig 10
-	SetFont(QuestFont_Shadow_Small,             NORMAL, 16)
-	SetFont(QuestFont_Large,                    NORMAL, 16)
+	SetFont(NumberFont_GameNormal,              NORMAL, 13) -- orig 10 -- inherited by WhiteNormalNumberFont, tekticles = 11
+	SetFont(QuestFont_Enormous,                   BOLD, 30)
 	SetFont(QuestFont_Huge,                       BOLD, 19)
+	SetFont(QuestFont_Large,                    NORMAL, 16) -- SharedFonts.xml
 	SetFont(QuestFont_Shadow_Huge,                BOLD, 19, nil, nil, nil, nil, 0.54, 0.4, 0.1)
+	SetFont(QuestFont_Shadow_Small,             NORMAL, 16)
 	SetFont(QuestFont_Super_Huge,                 BOLD, 24)
+	SetFont(QuestFont_Super_Huge_Outline,         BOLD, 24, "OUTLINE")
 	SetFont(ReputationDetailFont,                 BOLD, 12, nil, nil, nil, nil, 0, 0, 0, 1, -1)
 	SetFont(SpellFont_Small,                      BOLD, 11)
+	SetFont(SplashHeaderFont,                     BOLD, 24)
+	SetFont(SystemFont_Huge1,                   NORMAL, 20)
+	SetFont(SystemFont_Huge1_Outline,           NORMAL, 20, "OUTLINE")
 	SetFont(SystemFont_InverseShadow_Small,       BOLD, 11)
 	SetFont(SystemFont_Large,                   NORMAL, 17)
-	SetFont(SystemFont_Med1,                    NORMAL, 13)
+	SetFont(SystemFont_Med1,                    NORMAL, 13) -- SharedFonts.xml
 	SetFont(SystemFont_Med2,                    ITALIC, 14, nil, 0.15, 0.09, 0.04)
 	SetFont(SystemFont_Med3,                    NORMAL, 15)
+	SetFont(SystemFont_Outline,                 NUMBER, 13, "OUTLINE")
+	SetFont(SystemFont_Outline_Small,           NUMBER, 13, "OUTLINE")
 	SetFont(SystemFont_OutlineThick_Huge2,      NORMAL, 22, "THICKOUTLINE")
 	SetFont(SystemFont_OutlineThick_Huge4,  BOLDITALIC, 27, "THICKOUTLINE")
 	SetFont(SystemFont_OutlineThick_WTF,    BOLDITALIC, 31, "THICKOUTLINE", nil, nil, nil, 0, 0, 0, 1, -1)
-	SetFont(SystemFont_Outline_Small,           NUMBER, 13, "OUTLINE")
-	SetFont(SystemFont_Outline,                 NUMBER, 13, "OUTLINE")
-	SetFont(SystemFont_Shadow_Huge1,              BOLD, 20)
-	SetFont(SystemFont_Shadow_Huge3,              BOLD, 25)
-	SetFont(SystemFont_Shadow_Large,            NORMAL, 17)
-	SetFont(SystemFont_Shadow_Med1,             NORMAL, 13)
-	SetFont(SystemFont_Shadow_Med2,             NORMAL, 14)
+	SetFont(SystemFont_OutlineThick_WTF2,   BOLDITALIC, 36) -- SharedFonts.xml
+	SetFont(SystemFont_Shadow_Huge1,              BOLD, 20) -- SharedFonts.xml
+	SetFont(SystemFont_Shadow_Huge2,              BOLD, 24) -- SharedFonts.xml
+	SetFont(SystemFont_Shadow_Huge3,              BOLD, 25) -- SharedFonts.xml
+	SetFont(SystemFont_Shadow_Large,            NORMAL, 17) -- SharedFonts.xml
+	SetFont(SystemFont_Shadow_Large2,           NORMAL, 19) -- SharedFonts.xml
+	SetFont(SystemFont_Shadow_Large_Outline,    NORMAL, 17, "OUTLINE") -- SharedFonts.xml
+	SetFont(SystemFont_Shadow_Med1,             NORMAL, 13) -- SharedFonts.xml
+	SetFont(SystemFont_Shadow_Med1_Outline,     NORMAL, 12, "OUTLINE") -- SharedFonts.xml
+	SetFont(SystemFont_Shadow_Med2,             NORMAL, 14) -- SharedFonts.xml
 	SetFont(SystemFont_Shadow_Med3,             NORMAL, 15)
-	SetFont(SystemFont_Shadow_Outline_Huge2,    NORMAL, 22, "OUTLINE")
-	SetFont(SystemFont_Shadow_Small,            NORMAL, 11) -- was BOLD, used in dropdown menus
-	SetFont(SystemFont_Small,                   NORMAL, 12)
-	SetFont(SystemFont_Tiny,                    NORMAL, 11)
+	SetFont(SystemFont_Shadow_Outline_Huge2,    NORMAL, 22, "OUTLINE") -- SharedFonts.xml
+	SetFont(SystemFont_Shadow_Small,            NORMAL, 11) -- was BOLD, used in dropdown menus -- SharedFonts.xml
+	SetFont(SystemFont_Small,                   NORMAL, 12) -- SharedFonts.xml
+	SetFont(SystemFont_Small2,                  NORMAL, 12) -- SharedFonts.xml
+	SetFont(SystemFont_Tiny,                    NORMAL, 11) -- SharedFonts.xml
 	SetFont(Tooltip_Med,                        NORMAL, 13)
 	SetFont(Tooltip_Small,                        BOLD, 12)
 
-	-- Derived fonts
-	SetFont(BossEmoteNormalHuge,  BOLDITALIC, 27, "THICKOUTLINE")
-	SetFont(CombatTextFont,           NORMAL, 26)
-	SetFont(ErrorFont,                ITALIC, 16, nil, 60)
-	SetFont(QuestFontNormalSmall,       BOLD, 13, nil, nil, nil, nil, 0.54, 0.4, 0.1)
-	SetFont(WorldMapTextFont,     BOLDITALIC, 31, "THICKOUTLINE", 40, nil, nil, 0, 0, 0, 1, -1)
+	-- Derived fonts in FontStyles.xml
+	SetFont(BossEmoteNormalHuge,  BOLDITALIC, 27, "THICKOUTLINE") -- inherits SystemFont_Shadow_Huge3
+	SetFont(CombatTextFont,           NORMAL, 26) -- inherits SystemFont_Shadow_Huge3
+	SetFont(ErrorFont,                ITALIC, 16, nil, 60) -- inherits GameFontNormalLarge
+	SetFont(QuestFontNormalSmall,       BOLD, 13, nil, nil, nil, nil, 0.54, 0.4, 0.1) -- inherits GameFontBlack
+	SetFont(WorldMapTextFont,     BOLDITALIC, 31, "THICKOUTLINE", 40, nil, nil, 0, 0, 0, 1, -1) -- inherits SystemFont_OutlineThick_WTF
 
 	--[[ Fancy stuff!
 	SetFont(ZoneTextFont,           BOLD, 31, "THICKOUTLINE") -- inherits SystemFont_OutlineThick_WTF
