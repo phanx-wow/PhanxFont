@@ -52,59 +52,28 @@ Options:SetScript("OnShow", function(self)
 	Notes:SetJustifyV("TOP")
 	Notes:SetText(GetAddOnMetadata(ADDON, "Notes"))
 
-	local Media = LibStub("LibSharedMedia-3.0")
 	local UpdatePreviews, SampleText
 
 	----------
 
-	local NormalFont = LibStub("PhanxConfig-Dropdown"):New(self, L["Normal Font"], nil, Media:List("font"))
+	local NormalFont = LibStub("PhanxConfig-MediaDropdown"):New(self, L["Normal Font"], nil,"font")
 	NormalFont:SetPoint("TOPLEFT", Notes, "BOTTOMLEFT", 0, -8)
 	NormalFont:SetPoint("TOPRIGHT", Notes, "BOTTOM", -8, -8)
 
 	function NormalFont:OnValueChanged(value)
-		local _, height, flags = self.valueText:GetFont()
-		self.valueText:SetFont(Media:Fetch("font", value), height, flags)
 		PhanxFontDB.normal = value
 		UpdatePreviews()
 	end
 
-	function NormalFont:OnListButtonChanged(button, value, selected)
-		if button:IsShown() then
-			button.label:SetFont(Media:Fetch("font", value), UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT)
-		end
-	end
-
-	NormalFont.__SetValue = NormalFont.SetValue
-	function NormalFont:SetValue(value)
-		local _, height, flags = self.valueText:GetFont()
-		self.valueText:SetFont(Media:Fetch("font", value), height, flags)
-		self:__SetValue(value)
-	end
-
 	----------
 
-	local BoldFont = LibStub("PhanxConfig-Dropdown"):New(self, L["Bold Font"], nil, Media:List("font"))
+	local BoldFont = LibStub("PhanxConfig-MediaDropdown"):New(self, L["Bold Font"], nil, "font")
 	BoldFont:SetPoint("TOPLEFT", NormalFont, "BOTTOMLEFT", 0, -16)
 	BoldFont:SetPoint("TOPRIGHT", NormalFont, "BOTTOMRIGHT", 0, -16)
 
 	function BoldFont:OnValueChanged(value)
-		local _, height, flags = self.valueText:GetFont()
-		self.valueText:SetFont(Media:Fetch("font", value), height, flags)
 		PhanxFontDB.bold = value
 		UpdatePreviews()
-	end
-
-	function BoldFont:OnListButtonChanged(button, value, selected)
-		if button:IsShown() then
-			button.label:SetFont(Media:Fetch("font", value), UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT)
-		end
-	end
-
-	BoldFont.__SetValue = BoldFont.SetValue
-	function BoldFont:SetValue(value)
-		local _, height, flags = self.valueText:GetFont()
-		self.valueText:SetFont(Media:Fetch("font", value), height, flags)
-		self:__SetValue(value)
 	end
 
 	----------
@@ -235,6 +204,7 @@ Options:SetScript("OnShow", function(self)
 
 	function UpdatePreviews(width)
 		-- print(strjoin(" | ", "UpdatePreviews", PhanxFontDB.normal, PhanxFontDB.bold, PhanxFontDB.scale))
+		local Media = LibStub("LibSharedMedia-3.0")
 		local NORMAL = Media:Fetch("font", PhanxFontDB.normal)
 		local BOLD = Media:Fetch("font", PhanxFontDB.bold)
 		SampleText:SetFont(NORMAL, 14 * PhanxFontDB.scale)
