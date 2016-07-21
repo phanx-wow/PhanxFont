@@ -2,7 +2,7 @@
 	PhanxFont
 	Simple font replacement.
 	Based on tekticles by Tekkub, which is based on ClearFont2 by Kirkburn.
-	Copyright (c) 2012-2014 Phanx <addons@phanx.net>. All rights reserved.
+	Copyright (c) 2012-2016 Phanx <addons@phanx.net>. All rights reserved.
 
 	Please DO NOT upload this addon to other websites, or post modified
 	versions of it. However, you are welcome to include a copy of it

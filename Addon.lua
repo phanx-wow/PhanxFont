@@ -2,7 +2,7 @@
 	PhanxFont
 	Simple font replacement.
 	Based on tekticles by Tekkub, which is based on ClearFont2 by Kirkburn.
-	Copyright (c) 2012-2014 Phanx <addons@phanx.net>. All rights reserved.
+	Copyright (c) 2012-2016 Phanx <addons@phanx.net>. All rights reserved.
 
 	Please DO NOT upload this addon to other websites, or post modified
 	versions of it. However, you are welcome to include a copy of it
@@ -15,13 +15,13 @@
 local ADDON, Addon = ...
 
 PhanxFontDB = {
-	normal = "Asap",
-	bold   = "Asap Bold",
+	normal = "Lato",
+	bold   = "Lato Black",
 	scale  = 1.25,
 }
 
-local NORMAL       = [[Interface\AddOns\PhanxMedia\font\Asap.ttf]]
-local BOLD         = [[Interface\AddOns\PhanxMedia\font\Asap-Bold.ttf]]
+local NORMAL       = [[Interface\AddOns\PhanxMedia\font\Lato.ttf]]
+local BOLD         = [[Interface\AddOns\PhanxMedia\font\Lato-Black.otf]]
 local BOLDITALIC   = BOLD
 local ITALIC       = NORMAL
 local NUMBER       = BOLD
@@ -29,6 +29,7 @@ local NUMBER       = BOLD
 ------------------------------------------------------------------------
 
 local function SetFont(obj, font, size, style, r, g, b, sr, sg, sb, sox, soy)
+	if not obj then return end -- TODO: prune things that don't exist anymore
 	obj:SetFont(font, floor(size * PhanxFontDB.scale + 0.5), style)
 	if sr and sg and sb then
 		obj:SetShadowColor(sr, sg, sb)
@@ -106,7 +107,7 @@ function Addon:SetFonts(event, addon)
 	SetFont(SystemFont_OutlineThick_Huge2,      NORMAL, 22, "THICKOUTLINE")
 	SetFont(SystemFont_OutlineThick_Huge4,  BOLDITALIC, 27, "THICKOUTLINE")
 	SetFont(SystemFont_OutlineThick_WTF,    BOLDITALIC, 31, "THICKOUTLINE", nil, nil, nil, 0, 0, 0, 1, -1)
-	SetFont(SystemFont_OutlineThick_WTF2,   BOLDITALIC, 36) -- SharedFonts.xml
+--	SetFont(SystemFont_OutlineThick_WTF2,   BOLDITALIC, 36) -- SharedFonts.xml
 	SetFont(SystemFont_Shadow_Huge1,              BOLD, 20) -- SharedFonts.xml
 	SetFont(SystemFont_Shadow_Huge2,              BOLD, 24) -- SharedFonts.xml
 	SetFont(SystemFont_Shadow_Huge3,              BOLD, 25) -- SharedFonts.xml

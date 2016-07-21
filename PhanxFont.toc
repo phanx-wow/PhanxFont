@@ -1,4 +1,4 @@
-## Interface: 60100
+## Interface: 70000
 
 ## Title: PhanxFont
 ## Notes: Simple font replacement.
@@ -9,7 +9,7 @@
 ## Author: Phanx
 ## X-Email: addons@phanx.net
 ## X-Credits: Based on tekticles by Tekkub, which is based on ClearFont2 by Kirkburn.
-## X-Copyright: Copyright (c) 2012-2015 Phanx. All rights reserved.
+## X-Copyright: Copyright (c) 2012-2016 Phanx. All rights reserved.
 
 ## OptionalDeps: LibSharedMedia-3.0, PhanxConfigWidgets
 ## SavedVariables: PhanxFontDB
