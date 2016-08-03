@@ -119,7 +119,8 @@ function Addon:SetFonts(event, addon)
 	SetFont(SystemFont_Shadow_Med2,             NORMAL, 14) -- SharedFonts.xml
 	SetFont(SystemFont_Shadow_Med3,             NORMAL, 15)
 	SetFont(SystemFont_Shadow_Outline_Huge2,    NORMAL, 22, "OUTLINE") -- SharedFonts.xml
-	SetFont(SystemFont_Shadow_Small,            NORMAL, 11) -- was BOLD, used in dropdown menus -- SharedFonts.xml
+	SetFont(SystemFont_Shadow_Small,            NORMAL, 11) -- SharedFonts.xml
+	SetFont(SystemFont_Shadow_Small2,           NORMAL, 11) -- SharedFonts.xml
 	SetFont(SystemFont_Small,                   NORMAL, 12) -- SharedFonts.xml
 	SetFont(SystemFont_Small2,                  NORMAL, 12) -- SharedFonts.xml
 	SetFont(SystemFont_Tiny,                    NORMAL, 11) -- SharedFonts.xml
@@ -138,48 +139,6 @@ function Addon:SetFonts(event, addon)
 	SetFont(SubZoneTextFont,        BOLD, 27, "THICKOUTLINE") -- inherits SystemFont_OutlineThick_Huge4
 	SetFont(PVPInfoTextFont,      NORMAL, 22, "THICKOUTLINE") -- inherits SystemFont_OutlineThick_Huge2
 	]]
-
-	-- Language override fonts
-	for _, fobj in pairs({
-		GameFontNormalKO,
-		GameFontNormalRU,
-		GameFontNormalZH,
-	}) do
-		local font, _, outline = fobj:GetFont()
-		SetFont(fobj, font, 13, outline) -- size should match SystemFont_Shadow_Med1
-	end
-	for _, fobj in pairs({
-		ChatFontNormalKO,
-		ChatFontNormalRU,
-		ChatFontNormalZH,
-	}) do
-		local font, _, outline = fobj:GetFont()
-		SetFont(fobj, font, 14, outline) -- size should match NumberFont_Shadow_Med
-	end
-	for _, fobj in pairs({
-		FriendsFont_LargeKO,
-		FriendsFont_LargeRU,
-		FriendsFont_LargeZH,
-	}) do
-		local font, _, outline = fobj:GetFont()
-		SetFont(fobj, font, 15, outline) -- size should match FriendsFont_Large
-	end
-	for _, fobj in pairs({
-		FriendsFont_NormalKO,
-		FriendsFont_NormalRU,
-		FriendsFont_NormalZH,
-	}) do
-		local font, _, outline = fobj:GetFont()
-		SetFont(fobj, font, 13, outline) -- size should match FriendsFont_Normal
-	end
-	for _, fobj in pairs({
-		FriendsFont_SmallKO,
-		FriendsFont_SmallRU,
-		FriendsFont_SmallZH,
-	}) do
-		local font, _, outline = fobj:GetFont()
-		SetFont(fobj, font, 11, outline) -- size should match FriendsFont_Small
-	end
 
 	-- Chat frames
 	local _, size = ChatFrame1:GetFont()
