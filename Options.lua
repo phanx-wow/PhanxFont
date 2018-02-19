@@ -1,15 +1,12 @@
 ﻿--[[--------------------------------------------------------------------
 	PhanxFont
-	Simple font replacement.
+	Simple font replacement and scaling.
 	Based on tekticles by Tekkub, which is based on ClearFont2 by Kirkburn.
-	Copyright (c) 2012-2016 Phanx <addons@phanx.net>. All rights reserved.
-
-	Please DO NOT upload this addon to other websites, or post modified
-	versions of it. However, you are welcome to include a copy of it
-	WITHOUT CHANGES in compilations posted on Curse and/or WoWInterface.
-	You are also welcome to use any/all of its code in your own addon, as
-	long as you do not use my name or the name of this addon ANYWHERE in
-	your addon, including its name, outside of an optional attribution.
+	Copyright 2012-2018 Phanx <addons@phanx.net>
+	Zlib license; see LICENSE.txt for the full license text.
+	https://www.wowinterface.com/downloads/info24565-PhanxFont.html
+	https://www.curseforge.com/wow/addons/phanxfont
+	https://github.com/phanx-wow/PhanxFont
 ----------------------------------------------------------------------]]
 
 local ADDON, Addon = ...
