@@ -1,4 +1,4 @@
-## Interface: 70300
+## Interface: 80000
 ## Version: @project-version@
 
 ## Title: PhanxFont
@@ -10,6 +10,7 @@
 ## Author: Phanx
 ## X-Email: addons@phanx.net
 ## X-License: zlib/libpng License
+## X-Website: https://github.com/phanx-wow/PhanxFont
 ## X-Curse-Project-ID: 287705
 ## X-WoWI-ID: 24565
 
