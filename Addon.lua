@@ -152,13 +152,7 @@ f:SetScript("OnEvent", function(self, event, addon)
 	CHAT_FONT_HEIGHTS = { 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24 }
 
 	Addon:SetFonts()
---[[
-	-- I have no idea why the channel list is getting fucked up
-	-- but re-setting the font obj seems to fix it
-	for i = 1, MAX_CHANNEL_BUTTONS do
-		_G["ChannelButton"..i.."Text"]:SetFontObject(GameFontNormalSmallLeft)
-	end
-]]
+
 	for _, button in pairs(PaperDollTitlesPane.buttons) do
 		button.text:SetFontObject(GameFontHighlightSmallLeft)
 	end
@@ -172,7 +166,7 @@ f:SetScript("OnEvent", function(self, event, addon)
 	FloatingBattlePetTooltip.Name:SetFontObject(GameTooltipHeaderText)
 
 	LFGListFrame.CategorySelection.CategoryButtons[1].Label:SetFontObject(GameFontNormal)
-	WorldMapFrameNavBarHomeButtonText:SetFontObject(GameFontNormal)
+	WorldMapFrameHomeButtonText:SetFontObject(GameFontNormal)
 end)
 
 hooksecurefunc("FCF_SetChatWindowFontSize", function(self, frame, size)
