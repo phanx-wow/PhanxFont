@@ -63,6 +63,7 @@ function Addon:SetFonts(event, addon)
 	SetFont(FriendsFont_Normal,                 NORMAL, 13, nil, nil, nil, nil, 0, 0, 0, 1, -1)
 	SetFont(FriendsFont_Small,                  NORMAL, 11, nil, nil, nil, nil, 0, 0, 0, 1, -1)
 	SetFont(FriendsFont_UserText,               NUMBER, 12, nil, nil, nil, nil, 0, 0, 0, 1, -1)
+	SetFont(Game15Font_o1,                      NORMAL, 15, "OUTLINE")
 	SetFont(Game18Font,                         NORMAL, 18)
 	SetFont(Game24Font,                         NORMAL, 24) -- there are two of these, good job Blizzard
 	SetFont(Game27Font,                         NORMAL, 27)
