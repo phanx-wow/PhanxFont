@@ -109,7 +109,7 @@ Options:SetScript("OnShow", function(self)
 
 	----------
 
-	local ScrollBG = CreateFrame("Frame", nil, self)
+	local ScrollBG = CreateFrame("Frame", nil, self, BackdropTemplateMixin and "BackdropTemplate")
 	ScrollBG:SetPoint("TOPLEFT", Notes, "BOTTOM", 8, 0)
 	ScrollBG:SetPoint("BOTTOMRIGHT", self, -16, 16)
 	ScrollBG:SetBackdrop({ bgFile = "Interface\\BUTTONS\\WHITE8X8", tile = true, tileSize = 8, edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16, insets = { left = 4, right = 4, top = 4, bottom = 4 }})
